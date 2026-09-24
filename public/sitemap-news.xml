@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url>
+    <loc>https://techpulse.dev/news/next-generation-frontier-models-autonomous-reasoning</loc>
+    <news:news>
+      <news:publication>
+        <news:name>TechPulse</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-20T10:00:00Z</news:publication_date>
+      <news:title><![CDATA[Next-Generation Frontier Models: How Autonomous Reasoning Transforms Software Engineering]]></news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://techpulse.dev/news/silicon-photonics-2nm-process-nodes-datacenter-hardware</loc>
+    <news:news>
+      <news:publication>
+        <news:name>TechPulse</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-20T06:00:00Z</news:publication_date>
+      <news:title><![CDATA[Silicon Photonics & 2nm Process Nodes: The Hardware Race Powering Hyper-Scale Datacenters]]></news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://techpulse.dev/news/commercial-nuclear-fusion-magnetic-confinement-plasma</loc>
+    <news:news>
+      <news:publication>
+        <news:name>TechPulse</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-19T14:30:00Z</news:publication_date>
+      <news:title><![CDATA[Commercial Nuclear Fusion: Magnetic Confinement Sets New Plasma Stability Record]]></news:title>
+    </news:news>
+  </url>
+  <url>
+    <loc>https://techpulse.dev/news/autonomous-ai-agents-enterprise-operations</loc>
+    <news:news>
+      <news:publication>
+        <news:name>TechPulse</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2026-09-19T09:15:00Z</news:publication_date>
+      <news:title><![CDATA[Autonomous AI Agents in Enterprise Operations: Moving Past the Pilot Phase]]></news:title>
+    </news:news>
+  </url>
+</urlset>

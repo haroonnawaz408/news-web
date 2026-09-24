@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Primary SEO -->
+    <title>PulseNews Pakistan — 24/7 Live Breaking News, Politics, Cricket &amp; Economy</title>
+    <meta name="description" content="PulseNews Pakistan is your premier digital wire for breaking news, national politics, cricket, economy, business, technology, and global updates — refreshed every 10 minutes." />
+    <meta name="keywords" content="Pakistan News, Breaking News, Live News Pakistan, Cricket News, Pakistan Politics, PSX Market, Daily Rates PKR, Petrol Price Pakistan" />
+    <meta name="author" content="PulseNews Editorial Board" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#0B0F14" />
+
+    <!-- Geo / Language (Google News Pakistan) -->
+    <meta name="language" content="English" />
+    <meta name="geo.region" content="PK" />
+    <meta name="geo.placename" content="Pakistan" />
+    <meta name="content-language" content="en-PK" />
+    <meta http-equiv="content-language" content="en-PK" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="PulseNews Pakistan" />
+    <meta property="og:title" content="PulseNews Pakistan — 24/7 Breaking News" />
+    <meta property="og:description" content="Pakistan's premier digital news wire — breaking politics, cricket, economy and global updates every 10 minutes." />
+    <meta property="og:url" content="https://pulsenews.pk/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1200&q=80" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_PK" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PulseNewsPK" />
+    <meta name="twitter:title" content="PulseNews Pakistan — 24/7 Breaking News" />
+    <meta name="twitter:description" content="Pakistan's premier digital news wire — breaking politics, cricket, economy and global updates every 10 minutes." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1200&q=80" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://pulsenews.pk/" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(r) {
+          r.forEach(function(reg) { reg.unregister(); });
+        });
+      }
+      if ('caches' in window) {
+        caches.keys().then(function(keys) { keys.forEach(function(k) { caches.delete(k); }); });
+      }
+    </script>
+  </head>
+  <body class="bg-white dark:bg-[#0B0F14] text-[#111827] dark:text-[#F9FAFB] min-h-screen antialiased selection:bg-blue-500 selection:text-white transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

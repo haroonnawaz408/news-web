@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PulseNews Pakistan — 24/7 Live Breaking News, Politics, Cricket &amp; Economy</title>
+    <link>https://pulsenews.pk</link>
+    <description>Pakistan premier digital news wire for national breaking headlines, politics, PSX economy, cricket, and global updates.</description>
+    <language>en-us</language>
+    <atom:link href="https://pulsenews.pk/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Sep 2026 05:41:43 GMT</lastBuildDate>
+    <item>
+      <title><![CDATA[CDF Munir says armed forces remain resolute in defeating terrorism, ensuring lasting peace: ISPR]]></title>
+      <link>https://pulsenews.pk/news/cdf-munir-says-armed-forces-remain-resolute-defeating-terrorism</link>
+      <guid isPermaLink="true">https://pulsenews.pk/news/cdf-munir-says-armed-forces-remain-resolute-defeating-terrorism</guid>
+      <pubDate>Thu, 24 Sep 2026 05:41:43 GMT</pubDate>
+      <description><![CDATA[Chief of Army Staff Field Marshal General Asim Munir reaffirmed the armed forces determination to eliminate militancy and ensure socio-economic stability across Pakistan.]]></description>
+      <category>Pakistan</category>
+    </item>
+    <item>
+      <title><![CDATA[Pakistan Stock Exchange KSE-100 Benchmark Surges Following Bilateral Investment Frameworks]]></title>
+      <link>https://pulsenews.pk/news/pakistan-stock-exchange-kse100-surges-investment-frameworks</link>
+      <guid isPermaLink="true">https://pulsenews.pk/news/pakistan-stock-exchange-kse100-surges-investment-frameworks</guid>
+      <pubDate>Thu, 24 Sep 2026 05:41:43 GMT</pubDate>
+      <description><![CDATA[The benchmark KSE-100 index gained over 950 points during early morning trading at the Pakistan Stock Exchange as institutional investors welcomed macroeconomic indicators.]]></description>
+      <category>Pakistan</category>
+    </item>
+    <item>
+      <title><![CDATA[Next-Generation Frontier Models: How Autonomous Reasoning Transforms Software Engineering]]></title>
+      <link>https://pulsenews.pk/news/next-generation-frontier-models-autonomous-reasoning</link>
+      <guid isPermaLink="true">https://pulsenews.pk/news/next-generation-frontier-models-autonomous-reasoning</guid>
+      <pubDate>Sun, 20 Sep 2026 10:00:00 GMT</pubDate>
+      <description><![CDATA[A deep technical dive into how chain-of-thought inference scaling and agentic verification are shifting software development from code syntax writing to architecture orchestration.]]></description>
+      <category>AI</category>
+    </item>
+    <item>
+      <title><![CDATA[Silicon Photonics & 2nm Process Nodes: The Hardware Race Powering Hyper-Scale Datacenters]]></title>
+      <link>https://pulsenews.pk/news/silicon-photonics-2nm-process-nodes-datacenter-hardware</link>
+      <guid isPermaLink="true">https://pulsenews.pk/news/silicon-photonics-2nm-process-nodes-datacenter-hardware</guid>
+      <pubDate>Sun, 20 Sep 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[Semiconductor foundries push the physical limits of extreme ultraviolet lithography while optical interconnects replace copper wires to alleviate thermal bottlenecks.]]></description>
+      <category>Technology</category>
+    </item>
+    <item>
+      <title><![CDATA[Zero-Knowledge Proofs in Enterprise Finance: Privacy Meets Regulatory Compliance]]></title>
+      <link>https://pulsenews.pk/news/zero-knowledge-proofs-enterprise-finance-privacy</link>
+      <guid isPermaLink="true">https://pulsenews.pk/news/zero-knowledge-proofs-enterprise-finance-privacy</guid>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Cryptographic proofs of solvency and identity are enabling institutional capital to transact across public and private ledgers without leaking proprietary trade strategies.]]></description>
+      <category>Crypto</category>
+    </item>
+    <item>
+      <title><![CDATA[Commercial Nuclear Fusion: Magnetic Confinement Sets New Plasma Stability Record]]></title>
+      <link>https://pulsenews.pk/news/commercial-nuclear-fusion-magnetic-confinement-plasma-record</link>
+      <guid isPermaLink="true">https://pulsenews.pk/news/commercial-nuclear-fusion-magnetic-confinement-plasma-record</guid>
+      <pubDate>Sat, 19 Sep 2026 12:00:00 GMT</pubDate>
+      <description><![CDATA[High-temperature superconducting magnets maintain steady-state fusion conditions for over twenty minutes, accelerating the commercialization timeline for limitless clean baseload energy.]]></description>
+      <category>Science</category>
+    </item>
+    <item>
+      <title><![CDATA[Autonomous AI Agents in Enterprise Operations: Moving Past the Pilot Phase]]></title>
+      <link>https://pulsenews.pk/news/autonomous-ai-agents-enterprise-operations</link>
+      <guid isPermaLink="true">https://pulsenews.pk/news/autonomous-ai-agents-enterprise-operations</guid>
+      <pubDate>Sat, 19 Sep 2026 08:00:00 GMT</pubDate>
+      <description><![CDATA[Enterprises are transitioning from exploratory conversational chatbots to orchestrated multi-agent workflows handling compliance, procurement, and logistics.]]></description>
+      <category>Business</category>
+    </item>
+    <item>
+      <title><![CDATA[Zero-Day Mitigation in Critical Infrastructure: The Shift to Memory-Safe Systems]]></title>
+      <link>https://pulsenews.pk/news/zero-day-mitigation-critical-infrastructure-memory-safe</link>
+      <guid isPermaLink="true">https://pulsenews.pk/news/zero-day-mitigation-critical-infrastructure-memory-safe</guid>
+      <pubDate>Fri, 18 Sep 2026 16:00:00 GMT</pubDate>
+      <description><![CDATA[National security directives and open-source foundations coordinate the migration of industrial SCADA and networking stacks to memory-safe languages like Rust.]]></description>
+      <category>Cybersecurity</category>
+    </item>
+    <item>
+      <title><![CDATA[Spatial Computing & Micro-OLED Displays: Dissecting the Optics of Next-Gen Headsets]]></title>
+      <link>https://pulsenews.pk/news/spatial-computing-micro-oled-displays-next-gen-headsets</link>
+      <guid isPermaLink="true">https://pulsenews.pk/news/spatial-computing-micro-oled-displays-next-gen-headsets</guid>
+      <pubDate>Fri, 18 Sep 2026 10:00:00 GMT</pubDate>
+      <description><![CDATA[A rigorous teardown of pancake lens assemblies, foveated rendering pipelines, and eye-tracking sensors redefining mixed reality immersion.]]></description>
+      <category>Gadgets</category>
+    </item>
+    <item>
+      <title><![CDATA[The Bootstrapped Hardware Renaissance: How Rapid Prototyping Made Physical Startups Agile]]></title>
+      <link>https://pulsenews.pk/news/bootstrapped-hardware-renaissance-rapid-prototyping</link>
+      <guid isPermaLink="true">https://pulsenews.pk/news/bootstrapped-hardware-renaissance-rapid-prototyping</guid>
+      <pubDate>Thu, 17 Sep 2026 14:00:00 GMT</pubDate>
+      <description><![CDATA[Low-cost SLA 3D printing, turnkey PCBA fabrication, and automated global supply chains allow three-person hardware startups to ship consumer electronics in months instead of years.]]></description>
+      <category>Startups</category>
+    </item>
+  </channel>
+</rss>

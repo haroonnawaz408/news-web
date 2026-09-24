@@ -1,0 +1,110 @@
+{
+  "name": "TechPulse Automated News Ingestion Pipeline",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 1
+            }
+          ]
+        }
+      },
+      "id": "1",
+      "name": "Hourly Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://feeds.feedburner.com/TechCrunch/"
+      },
+      "id": "2",
+      "name": "Read Tech RSS Feed",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extract top 3 fresh articles and check timestamp\nconst items = $input.all().slice(0, 3);\nreturn items.map(item => ({\n  json: {\n    rawTitle: item.json.title,\n    rawLink: item.json.link,\n    rawContent: item.json.contentSnippet || item.json.content || item.json.description,\n    sourceName: 'TechCrunch Wire',\n    pubDate: item.json.pubDate\n  }\n}));"
+      },
+      "id": "3",
+      "name": "Parse & Limit Items",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini",
+        "prompt": "=You are the Senior Technical Editor at TechPulse Journal. Transform the following raw wire story into an authoritative, in-depth tech article:\n\nRaw Headline: {{$json.rawTitle}}\nRaw Content: {{$json.rawContent}}\nSource URL: {{$json.rawLink}}\n\nOutput STRICT JSON with the following schema:\n{\n  \"title\": \"Compelling, objective editorial headline\",\n  \"slug\": \"url-friendly-slug\",\n  \"excerpt\": \"2-sentence executive summary\",\n  \"content\": \"Full markdown body (minimum 3 paragraphs) with ## and ### headings, key technical specifications, bullet points, and an illustrative python/code block or benchmark if applicable.\",\n  \"category\": \"AI | Technology | Crypto | Business | Science | Startups | Cybersecurity | Gadgets\",\n  \"tags\": [\"Tag1\", \"Tag2\", \"Tag3\"],\n  \"featured_image\": \"https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200\"\n}"
+      },
+      "id": "4",
+      "name": "AI Editorial Rewriter",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1,
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "=INSERT INTO public.posts (\n  title, slug, excerpt, content, category, tags, featured_image, status, views, source_url, source_name, author_name\n) VALUES (\n  {{ JSON.stringify($json.title) }},\n  {{ JSON.stringify($json.slug) }},\n  {{ JSON.stringify($json.excerpt) }},\n  {{ JSON.stringify($json.content) }},\n  {{ JSON.stringify($json.category) }},\n  ARRAY[{{ $json.tags.map(t => JSON.stringify(t)).join(',') }}],\n  {{ JSON.stringify($json.featured_image) }},\n  'published',\n  0,\n  {{ JSON.stringify($json.rawLink) }},\n  'TechPulse AI Wire',\n  'TechPulse Editorial Bot'\n) ON CONFLICT (slug) DO NOTHING;"
+      },
+      "id": "5",
+      "name": "Insert Into Supabase Postgres",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [1140, 300]
+    }
+  ],
+  "connections": {
+    "Hourly Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Read Tech RSS Feed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Tech RSS Feed": {
+      "main": [
+        [
+          {
+            "node": "Parse & Limit Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse & Limit Items": {
+      "main": [
+        [
+          {
+            "node": "AI Editorial Rewriter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Editorial Rewriter": {
+      "main": [
+        [
+          {
+            "node": "Insert Into Supabase Postgres",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

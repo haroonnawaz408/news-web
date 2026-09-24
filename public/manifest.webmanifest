@@ -1,0 +1,19 @@
+{
+  "name": "TechPulse — Frontier Technology & AI Journal",
+  "short_name": "TechPulse",
+  "description": "Rigorous technical journalism tracking artificial intelligence breakthroughs, semiconductors, cryptography, and engineering infrastructure.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0F14",
+  "theme_color": "#2563EB",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["news", "technology", "magazines"]
+}

@@ -1,0 +1,269 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply font-sans bg-white dark:bg-[#0B0F14] text-neutral-900 dark:text-neutral-100;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Article Reading Experience */
+.article-body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  word-break: break-word;
+}
+
+.article-body p {
+  margin-bottom: 1.5rem;
+}
+
+.article-body strong {
+  font-weight: 700;
+  color: inherit;
+}
+
+/* Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   LIVE UPDATE BANNER & STATUS STRIP
+   ============================================================ */
+
+.live-status-strip {
+  background: linear-gradient(90deg, #064e3b 0%, #065f46 50%, #064e3b 100%);
+  color: #d1fae5;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 0.25rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  border-bottom: 1px solid rgba(16,185,129,0.3);
+}
+
+.live-strip-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.live-label {
+  font-weight: 800;
+  font-size: 0.65rem;
+  color: #34d399;
+  letter-spacing: 0.12em;
+}
+
+.live-timer {
+  color: #a7f3d0;
+  font-variant-numeric: tabular-nums;
+}
+
+.live-updated {
+  color: #6ee7b7;
+  margin-left: 0.5rem;
+}
+
+.live-refresh-btn {
+  display: flex;
+  align-items: center;
+  background: rgba(16,185,129,0.2);
+  border: 1px solid rgba(16,185,129,0.4);
+  border-radius: 4px;
+  color: #34d399;
+  cursor: pointer;
+  padding: 2px 6px;
+  margin-left: auto;
+  transition: background 0.2s;
+}
+.live-refresh-btn:hover {
+  background: rgba(16,185,129,0.35);
+}
+
+/* Pulsing red live dot */
+.live-dot-pulse {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ef4444;
+  animation: pulse-red 1.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse-red {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(1.35); }
+}
+
+/* New stories sliding banner */
+.new-stories-banner {
+  position: fixed;
+  top: 3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  animation: slide-down 0.4s cubic-bezier(0.16,1,0.3,1);
+  cursor: pointer;
+}
+
+@keyframes slide-down {
+  from { transform: translateX(-50%) translateY(-120%); opacity: 0; }
+  to   { transform: translateX(-50%) translateY(0);     opacity: 1; }
+}
+
+.new-stories-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #059669, #047857);
+  color: white;
+  border-radius: 999px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-shadow: 0 8px 32px rgba(5,150,105,0.5);
+  white-space: nowrap;
+}
+
+.new-stories-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6ee7b7;
+  animation: pulse-red 1s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.banner-close {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  margin-left: 0.4rem;
+  transition: background 0.15s;
+}
+.banner-close:hover { background: rgba(255,255,255,0.35); }
+
+/* Spinning icon for refresh button */
+.spin { animation: spin 0.8s linear infinite; }
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* ============================================================
+   BREAKING WIRE STRIP
+   ============================================================ */
+
+.breaking-wire-card {
+  border-left: 3px solid #ef4444;
+  padding-left: 0.75rem;
+  transition: border-color 0.2s;
+}
+.breaking-wire-card:hover { border-color: #f97316; }
+
+/* 80/20 Pakistan grid badge */
+.pk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: linear-gradient(90deg, #14532d, #166534);
+  color: #bbf7d0;
+  border-radius: 4px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 1px 6px;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   URDU TYPOGRAPHY ENGINE (Prevents Word Overlap & Line Collision)
+   ============================================================ */
+
+/* Global protection: never apply negative letter-spacing to Urdu or RTL text */
+[dir="rtl"],
+[dir="rtl"] *,
+:lang(ur),
+.font-urdu,
+.font-urdu * {
+  letter-spacing: 0 !important;
+}
+
+.urdu-headline {
+  font-family: 'Noto Nastaliq Urdu', 'Noto Sans Arabic', 'Urdu Typesetting', serif;
+  line-height: 2.2 !important;
+  letter-spacing: 0 !important;
+  word-spacing: 0.2em !important;
+  font-weight: 700;
+  padding-top: 0.25rem;
+  padding-bottom: 0.4rem;
+  text-rendering: optimizeLegibility;
+}
+
+.urdu-lead {
+  font-family: 'Noto Nastaliq Urdu', 'Noto Sans Arabic', 'Urdu Typesetting', serif;
+  line-height: 2.3 !important;
+  letter-spacing: 0 !important;
+  word-spacing: 0.16em !important;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+
+.urdu-card-title {
+  font-family: 'Noto Nastaliq Urdu', 'Noto Sans Arabic', 'Urdu Typesetting', serif;
+  line-height: 2.0 !important;
+  letter-spacing: 0 !important;
+  word-spacing: 0.15em !important;
+  padding-top: 0.15rem;
+  padding-bottom: 0.25rem;
+}
+

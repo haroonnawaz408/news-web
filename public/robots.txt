@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/*
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+Disallow: /admin/*
+
+User-agent: Googlebot-News
+Allow: /
+Disallow: /admin
+Disallow: /admin/*
+
+Sitemap: https://pulsenews.pk/sitemap.xml
+
